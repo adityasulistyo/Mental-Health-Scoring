@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aroma Jiwa by PsyCare</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome-screen">
+        <img src="img/Logo PsyCare.png" alt="" id="logo1" />
+        <h1>Welcome to <span class="highlight">"Aroma Jiwa"</span> Season 2 By <span class="highlight">PsyCare</span></h1>
+        <h5 class="sub-judul">Mental Health Screening With Mental Syntomp Screening Checklist (MSSC) Tools</h5>
+        <div class="code-container">
+          <label for="code">Masukkan Kode:</label>
+          <input type="password" id="code" placeholder="Masukkan kode..." />
+          <button onclick="verifyCode()">Mulai</button>
+        </div>
+      </div>
+
+      <div class="quiz-container" style="display: none">
+        <img src="img/Logo PsyCare.png" alt="" class="logo" />
+        <h2>Masukkan Data Diri</h2>
+        <form id="personal-info">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" required name="name" /><br /><br />
+          <label for="age">Umur:</label>
+          <input type="number" id="age" required name="age" /><br /><br />
+          <label for="education">Pendidikan Terakhir:</label>
+          <input type="text" id="education" required name="education" /><br /><br />
+          <label for="date">Tanggal Pelaksanaan:</label>
+          <input type="date" id="date" required name="date" /><br /><br />
+          <button type="button" onclick="startQuiz()">Mulai</button>
+        </form>
+      </div>
+
+      <div class="question-container" style="display: none">
+        <img src="img/Logo PsyCare.png" alt="" class="logo" />
+        <form id="quiz-form">
+          <h7 style="font-weight: 700; text-align: left" id="instructions">Intruksi!</h7>
+          <p id="instructions">Berikut terdapat 90 daftar pernyataan yang mungkin menggambarkan perasaan / peristiwa yang anda hadapi dalam kurun waktu tiga (3) bulan terakhir.</p>
+          <p id="instructions">Rangking lah 90 daftar pernyataan tersebut sesuai dengan derajat perasaan yang anda alami.</p>
+          <p id="instructions">Baca dengan cermat dan jawab lah dengan jujur setiap pernyataan yang ada sesuai dengan perasaan anda.</p>
+          <p id="instructions">Waktu untuk menyelesaikan keseluruhan soal adalah 15 menit.</p>
+          <h2>Kondisi Anda Saat Ini</h2>
+          <div id="questions" class="question"></div>
+          <div id="pagination" class="pagination"></div>
+          <button type="button" onclick="submitQuiz()">Selesai</button>
+        </form>
+      </div>
+
+      <div class="result-container" style="display: none">
+        <img src="img/Logo PsyCare.png" alt="" class="logo" />
+        <h2>Mental Syntomp Screening Checklist (MSSC) RESULT</h2>
+        <h3 style="color: #0097b2">Data Diri</h3>
+        <p id="user-data"></p>
+        <canvas id="resultChart"></canvas>
+        <table id="result-table">
+          <thead>
+            <tr>
+              <th>Kecenderungan Gangguan</th>
+              <th>Keterangan</th>
+              <th>Persentase (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Baris hasil akan diisi oleh JavaScript -->
+          </tbody>
+        </table>
+        <p id="diagnosa"></p>
+        <button onclick="downloadResult()">Download Hasil</button>
+      </div>
+    </div>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
