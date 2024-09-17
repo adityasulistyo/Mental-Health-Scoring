@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #004d40;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6f7f9; /* Warna latar belakang yang soft */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  height: 8%;
+  width: 20%;
+  padding-bottom: 5;
+}
+
+.highlight {
+  color: #027d93; /* Hijau Tosca atau warna yang lebih terang jika Anda mau */
+  font-weight: bold;
+  font-size: 1.2em; /* Membuat teks lebih besar */
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  animation: fadeIn 2s ease-in-out;
+  color: #0097b2;
+  margin-top: 0;
+  font-size: 1, 2emS;
+}
+
+H1 {
+  font-size: 22px;
+  font-weight: 800;
+  animation: fadeIn 2s ease-in-out;
+  color: #0097b2;
+  margin-bottom: 5px;
+}
+
+.code-container {
+  color: #0097b2;
+  margin-top: 20px;
+  animation: slideIn 2s ease-in-out;
+}
+
+input[type='password'],
+input[type='text'],
+input[type='number'],
+input[type='date'] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #b2dfdb;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0097b2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #027d93;
+}
+
+h2 {
+  text-align: center;
+  color: #0097b2;
+  margin-top: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+.question-container form {
+  max-width: 600px; /* Atur lebar maksimum container */
+  width: 80%; /* Mengatur lebar container relatif terhadap parent-nya */
+  margin: 0 auto; /* Agar container berada di tengah */
+  padding: 20px; /* Tambahkan padding agar konten tidak terlalu dekat dengan tepi */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar total elemen */
+  background-color: #ffffff; /* Background putih atau warna yang Anda inginkan */
+  border-radius: 10px; /* Membuat sudut container lebih halus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan untuk efek lebih menarik */
+}
+
+.question {
+  margin-bottom: 20px; /* Memberikan jarak antar pertanyaan */
+}
+
+.button {
+  display: block;
+  width: 100%; /* Tombol melebar sesuai dengan container */
+  padding: 10px;
+  background-color: #009688; /* Warna tombol */
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#result-table {
+  font-size: 12px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #027d93;
+}
+
+#result-table td,
+#result-table th {
+  padding: 8px;
+  border: 1px solid #027d93;
+  text-align: left;
+}
+
+.quiz-container {
+  max-width: 400px; /* Atur lebar maksimum form */
+  margin: 0 auto; /* Center align form */
+  padding: 20px; /* Tambahkan padding di dalam form */
+}
+
+img {
+  height: 8%;
+  width: 20%;
+  padding-bottom: 10;
+  justify-content: center;
+}
+
+input[type='text'],
+input[type='date'] {
+  width: 100%; /* Pastikan input field memenuhi lebar container */
+  padding: 10px; /* Tambahkan padding pada input field */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar total elemen */
+}
+
+button {
+  width: 100%; /* Pastikan tombol memenuhi lebar container */
+  padding: 10px; /* Tambahkan padding pada tombol */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar total elemen */
+}
+
+#user-data table {
+  width: 100%;
+  font-size: 16px #0097b2;
+  border: 1px solid #027d93;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#user-data td {
+  padding: 8px;
+  border: 1px solid #027d93;
+}
+
+#diagnosa {
+  font-size: 12px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #027d93;
+}
+
+#diagnosa th,
+#diagnosa td {
+  padding: 8px; /* Tambahkan padding untuk memberikan jarak */
+  text-align: left; /* Pastikan teks rata kiri */
+}
+
+#diagnosa tbody tr {
+  transition: background-color 0.3s ease; /* Tambahkan animasi untuk transisi warna */
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #708090; /* Slate Gray */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #6a5acd; /* Warna sedikit lebih terang saat hover */
+} /* Style untuk tombol navigasi */
+.nav-button {
+  background-color: #708090;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px; /* Jarak antar tombol */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #6a5acd; /* Warna saat hover */
+}
+
+/* Style untuk kontainer tombol navigasi */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style untuk navigasi halaman */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
