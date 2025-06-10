@@ -1,0 +1,1 @@
+Mental Health Scoring adalah sebuah website yang berfungsi untuk melakukan assesment psikologi guna untuk mengukur tingkat stress pada seseorang dengan hasil akhir sebuah grafik dan diagnosa dasar yang sudah di verifikasi kebenaran perhitungannya oleh psikolog langsung
